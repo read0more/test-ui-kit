@@ -1,0 +1,11 @@
+.buttons {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  > * {
+    width: fit-content;
+  }
+}
