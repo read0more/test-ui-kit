@@ -50,6 +50,26 @@
   --border-radius-medium: 8px;
   --border-radius-large: 12px;
   --border-radius-huge: 24px;
+
+  /* spacing */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+  --spacing-80: 80px;
+
+  /* shadow */
+  --shadow-xs: 0px 15px 10px 0px rgba(210, 192, 214, 0.07);
+  --shadow-s: 0px 8px 16px 0px rgba(62, 19, 77, 0.07);
+  --shadow-m: 0px 15px 30px 0px rgba(62, 19, 77, 0.07);
+  --shadow-l: 0px 10px 30px 0px rgba(62, 19, 77, 0.07);
 }
 
 * {
@@ -74,73 +94,6 @@ h3 {
 h4 {
   font-size: var(--h4-font-size);
   font-weight: var(--h4-font-weight);
-}
-
-.button {
-  min-width: var(--button-min-width);
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--button-gap);
-  padding-block: var(--button-padding-block);
-  border-radius: var(--border-radius-small);
-  border: var(--button-border);
-  color: var(--button-color);
-  background-color: var(--button-background-color);
-}
-
-.button.button--large {
-  --button-min-width: 163px;
-  --button-padding-block: 12px;
-}
-
-.button.button--medium {
-  --button-min-width: 109px;
-  --button-padding-block: 8px;
-}
-
-.button.button--small {
-  --button-min-width: 70px;
-  --button-padding-block: 4px;
-}
-
-.button.button--main {
-  --button-border: none;
-  --button-color: var(--white-color);
-  --button-background-color: var(--primary-color);
-}
-
-.button.button--main:hover {
-  --button-background-color: var(--primary-light-color);
-}
-
-.button.button--main:active {
-  --button-background-color: var(--primary-dark-color);
-}
-
-.button.button--main:disabled {
-  --button-background-color: var(--disabled-color);
-}
-
-.button.button--secondary {
-  --button-border: 1px solid var(--primary-color);
-  --button-color: var(--primary-color);
-  --button-background-color: var(--white-color);
-}
-
-.button.button--secondary:hover {
-  --button-border: 1px solid var(--primary-light-color);
-  --button-color: var(--primary-light-color);
-}
-
-.button.button--secondary:active {
-  --button-border: 1px solid var(--primary-dark-color);
-  --button-color: var(--primary-dark-color);
-}
-
-.button.button--secondary:disabled {
-  --button-border: 1px solid var(--disabled-color);
-  --button-color: var(--disabled-color);
 }
 
 a.link {

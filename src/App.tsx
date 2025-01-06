@@ -1,5 +1,5 @@
 import styles from "./App.module.scss";
-import Button from "./components/Button/Button";
+import Button from "./components/Button";
 
 type IconProps = {
   fillColor?: 'primary' | 'primary-light' | 'primary-dark' |'white';

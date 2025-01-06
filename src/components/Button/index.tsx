@@ -1,4 +1,4 @@
-import styles from './Button.module.scss'
+import styles from './index.module.scss'
 import classNames from 'classnames';
 
 const cx = classNames.bind(styles);
@@ -12,7 +12,7 @@ type Props = {
 }
 
 export default function Button({ type, size, Icon, onClick, disabled }: Props) {
-  const classes = cx('button', `button--${type}`, `button--${size}`);
+  const classes = cx(styles.button, styles[`button--${type}`], styles[`button--${size}`]);
   
   return (
     <button className={classes} onClick={onClick} disabled={disabled}>
