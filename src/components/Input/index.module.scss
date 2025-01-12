@@ -1,0 +1,53 @@
+.label.normal {
+  --input-padding: var(--spacing-12);
+}
+
+.label.small {
+  --input-padding: var(--spacing-8) var(--spacing-12);
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  color: var(--black-color);
+  font-weight: var(--regular-font-weight);
+  font-size: var(--body-s-font-size);
+  --input-border-color: var(--border-color);
+
+  &.error {
+    --input-border-color: var(--inform-error-color);
+  }
+  
+  .inputWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-8);
+    padding: var(--input-padding);
+    border: 1px solid var(--input-border-color);
+    border-radius: var(--border-radius-small);
+  }
+
+  .input {
+    padding: 0;
+    border: none;
+    background: none;
+    border-radius: var(--border-radius-small);
+
+    &::placeholder {
+      font-size: var(--body-xs-font-size);
+      font-weight: var(--light-font-weight);
+      color: var(--spacer-light-color);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .errorMessage {
+    color: var(--inform-error-color);
+    align-self: flex-end;
+  }
+}
