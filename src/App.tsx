@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./App.module.scss";
 import Button from "./components/Button";
 import Input from "./components/Input";
+import Textarea from "./components/Textarea";
 
 
 type IconProps = {
@@ -66,7 +67,7 @@ function Icon({ fillColor = 'white' }: IconProps) {
 }
 
 function App() {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState('asdasdasd\nasdiajsdpajsd\nasdpiajsd\nasdpiajsd');
 
   function handleChangeValue(newValue: string) {
     setValue(newValue);
@@ -78,6 +79,7 @@ function App() {
       <Button type='main' size='medium' Icon={<Icon />} />
       <Button type='secondary' size='large' />
       <Input value={value} setValue={handleChangeValue} size='small' placeholder='Type something' label='Input' Icon={<Icon fillColor="gray" />} error="error." />
+      <Textarea value={value} setValue={handleChangeValue} resize placeholder='Type something' isShowTextCounter />
     </div>
     <a className="link" href="https://www.google.com">Google</a>
     </>

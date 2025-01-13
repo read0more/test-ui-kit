@@ -13,7 +13,7 @@ type Props = {
   error?: string;
 };
 
-export default function index({ size = 'normal', value, setValue, placeholder, label, Icon ,error }: Props) {
+export default function Input({ size = 'normal', value, setValue, placeholder, label, Icon ,error }: Props) {
   const classes = cx(styles.label, {
     [styles.error]: error,
   }, styles[size]);
