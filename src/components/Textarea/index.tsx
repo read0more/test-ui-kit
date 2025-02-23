@@ -36,7 +36,7 @@ export default function Textarea({
       />
       </div>
       {isShowTextCounter && (
-        <div className={styles.textCounter}>{value.length}{Number.isInteger(maxLength) ? `/${maxLength}` : ''}</div>
+        <div className={styles.textCounter}>{value?.length}{Number.isInteger(maxLength) ? `/${maxLength}` : ''}</div>
       )}
     </div>
   );
