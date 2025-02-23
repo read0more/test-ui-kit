@@ -79,7 +79,7 @@ function App() {
       <Button type='main' size='medium' Icon={<Icon />} />
       <Button type='secondary' size='large' />
       <Input value={value} setValue={handleChangeValue} size='small' placeholder='Type something' label='Input' Icon={<Icon fillColor="gray" />} error="error." />
-      <Textarea value={value} setValue={handleChangeValue} resize placeholder='Type something' isShowTextCounter />
+      <Textarea value={value} setValue={handleChangeValue} resize placeholder='Type something' isShowTextCounter maxLength={20} />
     </div>
     <a className="link" href="https://www.google.com">Google</a>
     </>

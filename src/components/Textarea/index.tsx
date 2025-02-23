@@ -9,6 +9,7 @@ type Props = {
   resize?: boolean;
   placeholder?: string;
   isShowTextCounter?: boolean;
+  maxLength?: number;
 };
 
 export default function Textarea({
@@ -17,6 +18,7 @@ export default function Textarea({
   resize,
   placeholder,
   isShowTextCounter,
+  maxLength
 }: Props) {
   const classes = cx(styles.textarea, {
     [styles.disableResize]: resize,
@@ -30,10 +32,11 @@ export default function Textarea({
         placeholder={placeholder}
         value={value}
         onChange={(e) => setValue(e.target.value)}
+        {...(maxLength && { maxLength })}
       />
       </div>
       {isShowTextCounter && (
-        <div className={styles.textCounter}>{value.length}/100</div>
+        <div className={styles.textCounter}>{value.length}{Number.isInteger(maxLength) ? `/${maxLength}` : ''}</div>
       )}
     </div>
   );
